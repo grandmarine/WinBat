@@ -1,92 +1,310 @@
 @echo off
-ECHO â˜†â˜†â˜†ê¸°ìˆ ì  ì·¨ì•½ì  ë¶„ì„ í‰ê°€ ë°©ë²• ìƒì„¸ê°€ì´ë“œ 2021.3. ê¸°ì¤€â˜†â˜†â˜†
+ECHO ¡Ù¡Ù¡Ù±â¼úÀû Ãë¾àÁ¡ ºÐ¼® Æò°¡ ¹æ¹ý »ó¼¼°¡ÀÌµå 2021.3. ±âÁØ¡Ù¡Ù¡Ù
 ECHO.
 ECHO.
 
-ECHO â—íŒë‹¨ê¸°ì¤€ W-02(ìƒ)
-ECHO ì–‘í˜¸ : Guest ê³„ì •ì´ ë¹„í™œì„±í™” ë˜ì–´ ìžˆëŠ” ê²½ìš°
-ECHO ì·¨ì•½ : Guest ê³„ì •ì´ í™œì„±í™” ë˜ì–´ ìžˆëŠ” ê²½ìš°
+ECHO ¡ÜÆÇ´Ü±âÁØ W-02(»ó)
+ECHO ¾çÈ£ : Guest °èÁ¤ÀÌ ºñÈ°¼ºÈ­ µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : Guest °èÁ¤ÀÌ È°¼ºÈ­ µÇ¾î ÀÖ´Â °æ¿ì
 
 ECHO.
-ECHO â—í˜„í™©
+ECHO ¡ÜÇöÈ²
 NET USER Guest > NUL
-IF NOT ERRORLEVEL 1 net user guest | find /i "í™œì„± ê³„ì •"
+IF NOT ERRORLEVEL 1 net user guest | find /i "È°¼º °èÁ¤"
 
 ECHO.
-ECHO â—ê²°ê³¼
-IF NOT ERRORLEVEL 1 net user guest | find /i "í™œì„± ê³„ì •" | find /i "ì˜ˆ" > NUL
-IF ERRORLEVEL 1 ECHO ì–‘í˜¸
-IF NOT ERRORLEVEL 1 ECHO ì·¨ì•½
+ECHO ¡Ü°á°ú
+IF NOT ERRORLEVEL 1 net user guest | find /i "È°¼º °èÁ¤" | find /i "¿¹" > NUL
+IF ERRORLEVEL 1 ECHO ¾çÈ£
+IF NOT ERRORLEVEL 1 ECHO Ãë¾à
 
 
 ECHO.
-ECHO â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
 ECHO.
 
 
-ECHO â—íŒë‹¨ê¸°ì¤€ W-03(ìƒ)
-ECHO ì–‘í˜¸ : ë¶ˆí•„ìš”í•œ ê³„ì •ì´ ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ê²½ìš°
-ECHO ì·¨ì•½ : ë¶ˆí•„ìš”í•œ ê³„ì •ì´ ì¡´ìž¬í•˜ëŠ” ê²½ìš°
+ECHO ¡ÜÆÇ´Ü±âÁØ W-03(»ó)
+ECHO ¾çÈ£ : ºÒÇÊ¿äÇÑ °èÁ¤ÀÌ Á¸ÀçÇÏÁö ¾Ê´Â °æ¿ì
+ECHO Ãë¾à : ºÒÇÊ¿äÇÑ °èÁ¤ÀÌ Á¸ÀçÇÏ´Â °æ¿ì
 
 ECHO.
-ECHO â—í˜„í™©
-NET USER |FIND /V "ëª…ë ¹ì„ ìž˜ ì‹¤í–‰í–ˆìŠµë‹ˆë‹¤."
+ECHO ¡ÜÇöÈ²
+NET USER |FIND /V "¸í·ÉÀ» Àß ½ÇÇàÇß½À´Ï´Ù."
 
 ECHO.
-ECHO â—ê²°ê³¼
-ECHO ì¸í„°ë·°
+ECHO ¡Ü°á°ú
+ECHO ÀÎÅÍºä
 
 ECHO.
-ECHO â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
 ECHO.
 
-ECHO â—íŒë‹¨ê¸°ì¤€ W-04(ìƒ)
-ECHO ì–‘í˜¸ : ê³„ì • ìž ê¸ˆ ìž„ê³„ê°’ì´ 5 ì´í•˜ì˜ ê°’ìœ¼ë¡œ ì„¤ì •ë˜ì–´ ìžˆëŠ” ê²½ìš°
-ECHO ì·¨ì•½ : ê³„ì • ìž ê¸ˆ ìž„ê³„ê°’ì´ 6 ì´ìƒì˜ ê°’ìœ¼ë¡œ ì„¤ì •ë˜ì–´ ìžˆëŠ” ê²½ìš°
+ECHO ¡ÜÆÇ´Ü±âÁØ W-04(»ó)
+ECHO ¾çÈ£ : °èÁ¤ Àá±Ý ÀÓ°è°ªÀÌ 5 ÀÌÇÏÀÇ °ªÀ¸·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : °èÁ¤ Àá±Ý ÀÓ°è°ªÀÌ 6 ÀÌ»óÀÇ °ªÀ¸·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
 
 ECHO.
-ECHO â—í˜„í™©
-NET ACCOUNTS | FIND /I "ìž ê¸ˆ ìž„ê³„ê°’"
+ECHO ¡ÜÇöÈ²
+NET ACCOUNTS | FIND /I "Àá±Ý ÀÓ°è°ª"
 
 ECHO.
-ECHO â—ê²°ê³¼
-NET ACCOUNTS | FINDSTR /I /C:"ìž ê¸ˆ ìž„ê³„ê°’" > 1-04-Threshold.txt
+ECHO ¡Ü°á°ú
+NET ACCOUNTS | FINDSTR /I /C:"Àá±Ý ÀÓ°è°ª" > 1-04-Threshold.txt
 FOR /f "tokens=1-3" %%a IN (1-04-Threshold.txt) DO SET Threshold=%%c
-IF %Threshold% LEQ 5 ECHO ì–‘í˜¸
-IF NOT %Threshold% LEQ 5 ECHO ì·¨ì•½
+IF %Threshold% LEQ 5 ECHO ¾çÈ£
+IF NOT %Threshold% LEQ 5 ECHO Ãë¾à
 
 DEL 1-04-Threshold.txt
 
 ECHO.
-ECHO â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
 ECHO.
 
 
-ECHO â—íŒë‹¨ê¸°ì¤€ W-05(ìƒ)
-ECHO ì–‘í˜¸ : "í•´ë… ê°€ëŠ¥í•œ ì•”í˜¸í™”ë¥¼ ì‚¬ìš©í•˜ì—¬ ì•”í˜¸ ì €ìž¥" ì •ì±…ì´ "ì‚¬ìš© ì•ˆ í•¨" ìœ¼ë¡œ ë˜ì–´ ìžˆëŠ” ê²½ìš°
-ECHO ì·¨ì•½ : "í•´ë… ê°€ëŠ¥í•œ ì•”í˜¸í™”ë¥¼ ì‚¬ìš©í•˜ì—¬ ì•”í˜¸ ì €ìž¥" ì •ì±…ì´ "ì‚¬ìš©" ìœ¼ë¡œ ë˜ì–´ ìžˆëŠ” ê²½ìš°
+ECHO ¡ÜÆÇ´Ü±âÁØ W-05(»ó)
+ECHO ¾çÈ£ : "ÇØµ¶ °¡´ÉÇÑ ¾ÏÈ£È­¸¦ »ç¿ëÇÏ¿© ¾ÏÈ£ ÀúÀå" Á¤Ã¥ÀÌ "»ç¿ë ¾È ÇÔ" À¸·Î µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : "ÇØµ¶ °¡´ÉÇÑ ¾ÏÈ£È­¸¦ »ç¿ëÇÏ¿© ¾ÏÈ£ ÀúÀå" Á¤Ã¥ÀÌ "»ç¿ë" À¸·Î µÇ¾î ÀÖ´Â °æ¿ì
 
 ECHO.
-ECHO â—í˜„í™©
+ECHO ¡ÜÇöÈ²
 secedit /export /cfg LocalSecurityPolicy.txt
 TYPE LocalSecurityPolicy.txt | find /i "ClearTextPassword"
 
 
 ECHO.
-ECHO â—ê²°ê³¼
+ECHO ¡Ü°á°ú
 TYPE LocalSecurityPolicy.txt | find /i "ClearTextPassword = 1" > NUL
-IF ERRORLEVEL 1 ECHO ì–‘í˜¸
-IF NOT ERRORLEVEL 1 ECHO ì·¨ì•½
+IF ERRORLEVEL 1 ECHO ¾çÈ£
+IF NOT ERRORLEVEL 1 ECHO Ãë¾à
 
 ECHO.
-ECHO â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-06(»ó)
+ECHO ¾çÈ£ : Administrators ±×·ìÀÇ ±¸¼º¿øÀ» 1¸í ÀÌÇÏ·Î À¯ÁöÇÏ°Å³ª ºÒÇÊ¿äÇÑ °ü¸®ÀÚ °èÂÄÀÌ Á¸ÀçÇÏÁö ¾Ê´Â °æ¿ì
+ECHO Ãë¾à : Administrators ±×·ì¿¡ ºÒÇÊ¿äÇÑ °ü¸®ÀÚ °èÁ¤ÀÌ Á¸ÀçÇÏ´Â °æ¿ì 
+
+ECHO.
+ECHO ¡ÜÇöÈ²
+net localgroup administrators | find /v "¸í·ÉÀ» Àß ½ÇÇàÇß½À´Ï´Ù."
+
+ECHO.
+ECHO ¡Ü°á°ú
+ECHO ÀÎÅÍºä
+
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-46(Áß)
+ECHO ¾çÈ£ : "Everyone »ç¿ë ±ÇÇÑÀ» ÀÍ¸í »ç¿ëÀÚ¿¡°Ô Àû¿ë" Á¤Ã¥ÀÌ "»ç¿ë ¾È ÇÔ" À¸·Î µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : "Everyone »ç¿ë ±ÇÇÑÀ» ÀÍ¸í »ç¿ëÀÚ¿¡°Ô Àû¿ë" Á¤Ã¥ÀÌ "»ç¿ë" À¸·Î µÇ¾î ÀÖ´Â °æ¿ì
+
+ECHO.
+ECHO ¡ÜÇöÈ²
+secedit /export /cfg LocalSecurityPolicy.txt
+TYPE LocalSecurityPolicy.txt | find /i "EveryoneIncludesAnonymous" 
+
+ECHO.
+ECHO ¡Ü°á°ú
+TYPE LocalSecurityPolicy.txt | find /i "EveryoneIncludesAnonymous" | find "4,0" > NUL
+IF ERRORLEVEL 1 ECHO Ãë¾à
+IF NOT ERRORLEVEL 1 ECHO ¾çÈ£ 
+ECHO.
+
+
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-47(Áß)
+ECHO ¾çÈ£ : "°èÁ¤ Àá±Ý ±â°£" ¹× "°èÁ¤ Àá±Ý ±â°£ ¿ø·¡´ë·Î ¼³Á¤ ±â°£"ÀÌ ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : "°èÁ¤ Àá±Ý ±â°£" ¹× "°èÁ¤ Àá±Ý ±â°£ ¿ø·¡´ë·Î ¼³Á¤ ±â°£"ÀÌ ¼³Á¤µÇÁö ¾Ê´Â °æ¿ì
+
+ECHO.
+ECHO.
+ECHO ¡ÜÇöÈ²
+net accounts | findstr /I /C:"Àá±Ý ±â°£"
+net accounts | findstr /I /C:"Àá±Ý °üÂû Ã¢"
+
+ECHO.
+ECHO ¡Ü°á°ú
+net accounts | findstr /I /C:"Àá±Ý ±â°£" >> 1-08-LockTime.txt
+FOR /f "tokens=1-6" %%a IN (1-08-LockTime.txt) DO SET LockTime=%%d
+
+net accounts | findstr /I /C:"Àá±Ý °üÂû Ã¢" >> 1-08-LockReTime.txt
+FOR /f "tokens=1-6" %%a IN (1-08-LockReTime.txt) DO SET LockReTime=%%e
+
+IF %LockTime% GEQ 60 IF %LockReTime% GEQ 60 GOTO 1-08-Y
+
+:1-08-N
+ECHO Ãë¾à
+GOTO 1-08-END
+
+:1-08-Y
+ECHO ¾çÈ£
+GOTO 1-08-END
+
+:1-08-END
+DEL 1-08-LockTime.txt
+DEL 1-08-LockReTime.txt
+
+ECHO.
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-48(Áß)
+ECHO ¾çÈ£ : "¾ÏÈ£´Â º¹Àâ¼ºÀ» ¸¸Á·ÇØ¾ß ÇÔ" Á¤Ã¥ÀÌ "»ç¿ë" À¸·Î µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : "¾ÏÈ£´Â º¹Àâ¼ºÀ» ¸¸Á·ÇØ¾ß ÇÔ" Á¤Ã¥ÀÌ "»ç¿ë ¾È ÇÔ" À¸·Î µÇ¾î ÀÖ´Â °æ¿ì
+
+ECHO.
+ECHO.
+ECHO ¡ÜÇöÈ²
+secedit /EXPORT /CFG LocalSecurityPolicy.txt
+TYPE LocalSecurityPolicy.txt | find /i "PasswordComplexity"
+
+ECHO.
+ECHO.
+ECHO ¡Ü°á°ú
+TYPE LocalSecurityPolicy.txt | find /i "PasswordCompleyxity" | find "1" > NUL
+IF ERRORLEVEL 1 ECHO Ãë¾à
+IF NOT ERRORLEVEL 1 ECHO ¾çÈ£
+
+DEL LocalSecurityPolicy.txt
+
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-49(Áß)
+ECHO ¾çÈ£ : "ÃÖ¼Ò ¾ÏÈ£ ±æÀÌ"°¡ "8¹®ÀÚ" ÀÌ»óÀ¸·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : "ÃÖ¼Ò ¾ÏÈ£ ±æÀÌ"°¡ "8¹®ÀÚ" ÀÌ»óÀ¸·Î ¼³Á¤µÇÁö ¾Ê¾Ò°Å³ª "8¹®ÀÚ" ¹Ì¸¸À¸·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+
+ECHO.
+ECHO ¡ÜÇöÈ²
+secedit /EXPORT /CFG LocalSecurityPolicy.txt
+TYPE LocalSecurityPolicy.txt | find /i "MinimumPasswordLength"
+
+ECHO.
+ECHO ¡Ü°á°ú
+TYPE LocalSecurityPolicy.txt | find "MinimumPasswordLength =" > passwd.txt
+FOR /f "tokens=1-3" %%a IN (passwd.txt) DO SET passwd_length=%%c
+IF %passwd_length% GEQ 8 ECHO ¾çÈ£
+IF NOT %passwd_length% GEQ 8 ECHO Ãë¾à
+
+DEL LocalSecurityPolicy.txt
+DEL passwd.txt
+
+ECHO.
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-50(Áß)
+ECHO ¾çÈ£ : "ÃÖ´ë ¾ÏÈ£ »ç¿ë ±â°£"ÀÌ "90ÀÏ" ÀÌÇÏ·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : "ÃÖ´ë ¾ÏÈ£ »ç¿ë ±â°£"ÀÌ ¼³Á¤µÇÁö ¾Ê¾Ò°Å³ª "90ÀÏ"À» ÃÊ°úÇÏ´Â °ªÀ¸·Î ¼³Á¤µÈ °æ¿ì
+ECHO.
+
+ECHO ¡ÜÇöÈ²
+secedit /EXPORT /CFG LocalSecurityPolicy.txt
+TYPE LocalSecurityPolicy.txt | find /i "MaximumPasswordAge" | find /v "\"
+
+ECHO.
+ECHO ¡Ü°á°ú
+TYPE LocalSecurityPolicy.txt | find "MaximumPasswordAge =" > passwd.txt
+FOR /f "tokens=1-3" %%a IN (passwd.txt) DO SET passwd_maxage=%%c
+IF %passwd_maxage% LEQ 90 ECHO ¾çÈ£
+IF NOT %passwd_maxage% LEQ 90 ECHO Ãë¾à
+
+DEL LocalSecurityPolicy.txt
+DEL passwd.txt
+
+ECHO.
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-51(Áß)
+ECHO ¾çÈ£ : "ÃÖ¼Ò ¾ÏÈ£ »ç¿ë ±â°£"ÀÌ 0º¸´Ù Å« °ªÀ¸·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : "ÃÖ¼Ò ¾ÏÈ£ »ç¿ë ±â°£"ÀÌ 0À¸·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+ECHO.
+
+ECHO ¡ÜÇöÈ²
+secedit /EXPORT /CFG LocalSecurityPolicy.txt
+TYPE LocalSecurityPolicy.txt | find /i "MinimumPasswordAge"
+
+ECHO.
+ECHO ¡Ü°á°ú
+
+TYPE LocalSecurityPolicy.txt | find "MinimumPasswordAge =" > passwd.txt
+FOR /f "tokens=1-3" %%a IN (passwd.txt) DO SET passwd_minage=%%c
+IF %passwd_minage% GEQ 1 ECHO ¾çÈ£
+IF NOT %passwd_minage% GEQ 1 ECHO Ãë¾à
+
+DEL LocalSecurityPolicy.txt
+DEL passwd.txt
+
+ECHO.
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-52(Áß)
+ECHO ¾çÈ£ : "¸¶Áö¸· »ç¿ëÀÚ ÀÌ¸§ Ç¥½Ã ¾È ÇÔ"ÀÌ "»ç¿ë"À¸·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+ECHO Ãë¾à : "¸¶Áö¸· »ç¿ëÀÚ ÀÌ¸§ Ç¥½Ã ¾È ÇÔ"ÀÌ "»ç¿ë ¾È ÇÔ"À¸·Î ¼³Á¤µÇ¾î ÀÖ´Â °æ¿ì
+ECHO.
+
+ECHO ¡ÜÇöÈ²
+reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" | findstr /I "DontDisplayLastUserName"
+
+ECHO ¡Ü°á°ú
+reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" | findstr /I "DontDisplayLastUserName" | find "1" > NUL
+IF NOT ERRORLEVEL 1 ECHO ¾çÈ£
+IF ERRORLEVEL 1 ECHO Ãë¾à
+
+ECHO.
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
+ECHO.
+
+
+ECHO ¡ÜÆÇ´Ü±âÁØ W-53(Áß)
+ECHO ¾çÈ£ : "·ÎÄÃ ·Î±×¿Â Çã¿ë Á¤Ã¥"¿¡ Administrator, IUSR_¸¸ Á¸ÀçÇÏ´Â °æ¿ì
+ECHO Ãë¾à : "·ÎÄÃ ·Î±×¿Â Çã¿ë Á¤Ã¥"¿¡ Administrator, IUSR_¿Ü ´Ù¸¥ °èÁ¤ ¹× ±×·ìÀÌ Á¸ÀçÇÏ´Â °æ¿ì
+ECHO.
+
+ECHO ¡ÜÇöÈ²
+secedit /EXPORT /CFG LocalSecurityPolicy.txt
+TYPE LocalSecurityPolicy.txt | find /i "SeInteractiveLogonRight"
+
+ECHO.
+ECHO ¡Ü°á°ú
+ECHO ÀÎÅÍºä
+
+ECHO.
+ECHO.
+ECHO ¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à
 ECHO.
 
 
 
-ë©”ë¡±
+
+
+
+
+
 
 PAUSE
+
 
 
 
