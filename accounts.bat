@@ -1,4 +1,5 @@
-@echo off
+@ECHO OFF
+TITLE 기술적 취약점 분석 평가 방법 상세가이드 2021.3. 기준
 ECHO ☆☆☆기술적 취약점 분석 평가 방법 상세가이드 2021.3. 기준☆☆☆
 ECHO.
 ECHO.
@@ -182,7 +183,6 @@ ECHO.
 ECHO □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 ECHO.
 
-
 ECHO ●판단기준 W-49(중)
 ECHO 양호 : "최소 암호 길이"가 "8문자" 이상으로 설정되어 있는 경우
 ECHO 취약 : "최소 암호 길이"가 "8문자" 이상으로 설정되지 않았거나 "8문자" 미만으로 설정되어 있는 경우
@@ -219,13 +219,13 @@ TYPE LocalSecurityPolicy.txt | find /i "MaximumPasswordAge" | find /v "\"
 
 ECHO.
 ECHO ●결과
-TYPE LocalSecurityPolicy.txt | find "MaximumPasswordAge =" > passwd1.txt
-FOR /f "tokens=1-3" %%a IN (passwd1.txt) DO SET passwd_maxage=%%c
+TYPE LocalSecurityPolicy.txt | find "MaximumPasswordAge =" > passwd.txt
+FOR /f "tokens=1-3" %%a IN (passwd.txt) DO SET passwd_maxage=%%c
 IF %passwd_maxage% LEQ 90 ECHO 양호
 IF NOT %passwd_maxage% LEQ 90 ECHO 취약
 
 DEL LocalSecurityPolicy.txt
-DEL passwd1.txt
+DEL passwd.txt
 
 ECHO.
 ECHO.
@@ -296,54 +296,7 @@ ECHO.
 ECHO □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 ECHO.
 
-ECHO ●판단기준 W-54(중)
-ECHO 양호 : "익명 SID/이름 변환 허용" 정책이 "사용 안 함" 으로 되어 있는 경우
-ECHO 취약 : "익명 SID/이름 변환 허용" 정책이 "사용" 으로 되어 있는 경우
-ECHO.
 
-ECHO ●현황
-secedit /EXPORT /CFG LocalSecurityPolicy.txt
-TYPE LocalSecurityPolicy.txt | find /i "LSAAnonymousNameLookup"
-
-ECHO.
-ECHO ●결과
-secedit /EXPORT /CFG LocalSecurityPolicy.txt
-TYPE LocalSecurityPolicy.txt | find /i "LSAAnonymousNameLookup" | find "0" >NUL
-IF ERRORLEVEL 1 ECHO 취약
-IF NOT ERRORLEVEL 1 ECHO 양호
-
-DEL LocalSecurityPolicy.txt
-
-ECHO.
-ECHO.
-ECHO □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
-ECHO.
-
-
-ECHO ●판단기준 W-55(중)
-ECHO 양호 : 최근 암호 기억이 4개 이상으로 설정되어 있는 경우
-ECHO 취약 : 최근 암호 기억이 4개 미만으로 설정되어 있는 경우
-ECHO.
-
-ECHO ●현황
-secedit /EXPORT /CFG LocalSecurityPolicy.txt
-TYPE LocalSecurityPolicy.txt |find /i "PasswordHistorySize"
-
-
-ECHO.
-ECHO ●결과
-TYPE LocalSecurityPolicy.txt |find /i "PasswordHistorySize" > passwd3.txt
-FOR /f "tokens=1-3" %%a IN (passwd3.txt) DO SET passwd_hsize=%c
-IF %passwd_hsize% GEQ 4 ECHO 양호
-IF NOT %passwd_hsize% GEQ 4 ECHO 취약
-
-DEL passwd3.txt
-DEL LocalSecurityPolicy.txt
-
-ECHO.
-ECHO.
-ECHO □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
-ECHO.
 
 
 
@@ -352,3 +305,9 @@ ECHO.
 
 
 PAUSE
+
+
+
+
+
+
